@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# progetto-react-di-Andrea-Altomare NyT
+---
+# New York Times React App
+<img src="https://github.com/user-attachments/assets/534c378e-2ae0-483f-8d15-e6632b03211f" width="300" />
+<img src="https://github.com/user-attachments/assets/a4eb0f4d-1075-4cca-bf67-c0af62d588e0" width="300" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Descrizione
+---
+Questa è una web app React che consente di cercare e visualizzare articoli del New York Times tramite la loro API ufficiale. L'app include:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Ricerca di articoli con debounce per ottimizzare le chiamate API.
+* Visualizzazione degli articoli principali nella homepage.
+* Navigazione tra le pagine con React Router.
+* Gestione dello stato globale con Redux Toolkit.
+* Interfaccia responsive basata su Bootstrap 5.
+* Carosello di articoli in homepage.
+* e registrazione dell'utente
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Funzionalità principali
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Ricerca dinamica** con debounce di 500ms per ridurre le richieste API.
+* **Visualizzazione dettagliata** di ogni articolo tramite pagina dedicata.
+* **Carosello** per scorrere tra i principali articoli del giorno.
+* **Navbar** responsive con menu offcanvas.
+* **Gestione degli errori** e stato di caricamento visibili all’utente.
+* **Deployment** pronto per Netlify con configurazioni corrette di redirect.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tecnologie usate
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* React 18
+* React Router DOM
+* Redux Toolkit
+* Bootstrap 5
+* API New York Times
+* Netlify (per hosting e deployment)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installazione
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clona il repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+scarica il file zip ed esegui i comandi bash
+git clone(https://github.com/andrea-340/progetto-react-completo-di-Andrea-Altomare.git) 
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Installa le dipendenze:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+4. Avvia l’app in locale:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+L’app sarà disponibile su [http://localhost:3000](http://localhost:3000)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Struttura del progetto
 
-### Analyzing the Bundle Size
+```
+/src
+  /api
+    nytimes.js             # Funzioni per chiamate API NYT
+  /components
+    Navbar.js              # Barra di navigazione
+    Carosello.js           # Componente carosello articoli
+    Search.js              # Componente ricerca articoli
+    HomePage.js            # Pagina principale con top stories
+    ArticlePage.js         # Pagina dettaglio articolo
+  /features
+    /articles
+      articlesSlice.js     # Slice Redux per gestione articoli e query
+  App.js                   # Setup router e struttura app
+  index.js                 # Entry point React
+/netlify
+  _redirects                # Configurazione redirect Netlify
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Deployment su Netlify
+[Netlify](https://ny-times-clone.netlify.app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Come usare l’app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Usa la barra di ricerca per trovare articoli con parole chiave.
+* Visualizza i risultati con titolo e snippet.
+* Clicca su un articolo per vedere il dettaglio completo.
+* Naviga facilmente con il menu hamburger in alto.
+* Scorri il carosello per vedere i top stories del giorno.
+* E registrati tramite i tre trattini all'angolo
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Licenza
 
-### `npm run build` fails to minify
+MIT License © 2025 Andrea Altomare
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
