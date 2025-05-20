@@ -5,7 +5,7 @@ import Carosello from "./components/Carosell";
 import Search from "./components/search";
 import ArticlePage from "./page/ArticlePage.jsx";
 import HomePage from "./components/HomePage";
-
+import "./App.css";
 function App() {
   return (
     <>
